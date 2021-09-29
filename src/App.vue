@@ -4,6 +4,7 @@
       <Header/>
       <Content/>
       <CallToAction/>
+      <Footer/>
     </div>
   </div>
 </template>
