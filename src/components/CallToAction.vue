@@ -5,7 +5,8 @@
                 <ul>
                     <li v-for="(link, index) in icons" :key="index">
                         <img :src="link.imgSrc" :alt="link.text">
-                        <a href="">{{link.text}}</a>
+                        <a 
+                        href="">{{link.text}}</a>
                     </li>
                 </ul>
             </nav>
@@ -46,5 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/style/variables';
+    section {
+        background-color: $mainColor;
+    }
 
 </style>

@@ -79,6 +79,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    header {
+        background-color: #ffffff;
+    }
     .header-top {
         display: flex;
         justify-content: space-between;

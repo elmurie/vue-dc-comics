@@ -4,7 +4,7 @@
             <div class="footer-top">
                 <ul>
                     <li v-for="(list, index) in lists" :key="index">{{list.title}}
-                        <ul>
+                        <ul class="bigList">
                             <li>
                                 <a href="list.url" v-for="(link, position) in list.links" :key="position">{{link.linkName}}</a>
                             </li>
@@ -99,4 +99,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .bigList {
+        display: flex;
+        flex-direction: column;
+        flex-wrap : wrap;
+    }
+    .bigList li {
+        display: flex;
+        flex-direction: column;
+    }
 </style>
