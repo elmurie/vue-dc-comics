@@ -86,11 +86,11 @@ export default {
                 
             ],
             logos : [
-                {logoName: "Facebook", logoSrc : './assets/img/footer-facebook.png', url : "#"},
-                {logoName: "Twitter", logoSrc : '@/assets/img/footer-twitter.png', url : "#"},
-                {logoName: "YouTube", logoSrc : '@assets/img/footer-youtube.png', url : "#"},
-                {logoName: "Pinterest", logoSrc : '../assets/img/footer-pinterest.png', url : "#"},
-                {logoName: "Periscope", logoSrc : 'assets/img/footer-periscope.png', url : "#"}
+                {logoName: "Facebook", logoSrc : '../img/footer-facebook.png', url : "#"},
+                {logoName: "Twitter", logoSrc : '../img/footer-twitter.png', url : "#"},
+                {logoName: "YouTube", logoSrc : '../img/footer-youtube.png', url : "#"},
+                {logoName: "Pinterest", logoSrc : '../img/footer-pinterest.png', url : "#"},
+                {logoName: "Periscope", logoSrc : '../img/footer-periscope.png', url : "#"}
                 
             ]
         }
@@ -99,5 +99,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>
