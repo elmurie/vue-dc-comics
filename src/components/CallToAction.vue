@@ -24,20 +24,20 @@ export default {
                     imgSrc : '../img/buy-comics-digital-comics.png'
                 },
                 {
-                    text : "DIGITAL COMICS",
-                    imgSrc : '../img/buy-comics-digital-comics.png'
+                    text : "DC MERCHANDISE",
+                    imgSrc : '../img/buy-comics-merchandise.png'
                 },
                 {
-                    text : "DIGITAL COMICS",
-                    imgSrc : '../img/buy-comics-digital-comics.png'
+                    text : "SUBSCRIPTION",
+                    imgSrc : '../img/buy-comics-subscriptions.png'
                 },
                 {
-                    text : "DIGITAL COMICS",
-                    imgSrc : '../img/buy-comics-digital-comics.png'
+                    text : "COMIC SHOP LOCATION",
+                    imgSrc : '../img/buy-comics-shop-locator.png'
                 },
                 {
-                    text : "DIGITAL COMICS",
-                    imgSrc : '../img/buy-comics-digital-comics.png'
+                    text : "DC POWER VISA",
+                    imgSrc : '../img/buy-dc-power-visa.svg'
                 }
             ]
         }
