@@ -49,7 +49,30 @@ export default {
 <style lang="scss" scoped>
     @import '../assets/style/variables';
     section {
+        padding: 3rem;
         background-color: $mainColor;
     }
+
+    ul, li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        li {
+            width: 20%;
+            img {
+                width: 2.8rem;
+                margin-right: 1rem;
+            }
+            &:nth-child(4) img {
+                width: 2.1rem;
+            }
+            &:last-child img {
+                width: 4rem;
+            }
+        }
+    }
+
+    
 
 </style>
