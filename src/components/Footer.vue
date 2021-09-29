@@ -1,15 +1,33 @@
 <template>
     <footer>
         <div class="container">
-            <ul>
-                <li v-for="(list, index) in lists" :key="index">{{list.title}}
+            <div class="footer-top">
+                <ul>
+                    <li v-for="(list, index) in lists" :key="index">{{list.title}}
+                        <ul>
+                            <li>
+                                <a href="list.url" v-for="(link, position) in list.links" :key="position">{{link.linkName}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="lx">
+                    <button>SIGN-UP NOW!</button>
+                </div>
+                <div class="rx">
+                    <a>FOLLOW US</a>
                     <ul>
-                        <li>
-                            <a href="list.url" v-for="(link, position) in list.links" :key="position">{{link.linkName}}</a>
+                        <li v-for="(logo, logoIndex) in logos" :key="logoIndex">
+                            <a :href="logo.url">
+                                <img :src="logo.logoSrc" :alt="logo.logoName">
+                            </a>
                         </li>
                     </ul>
-                </li>
-            </ul>
+                </div>
+
+            </div>
         </div>
     </footer>
 </template>
@@ -65,6 +83,14 @@ export default {
                         { linkName : "DC Power Visa", url : "#"}
                     ]
                 },
+                
+            ],
+            logos : [
+                {logoName: "Facebook", logoSrc : './assets/img/footer-facebook.png', url : "#"},
+                {logoName: "Twitter", logoSrc : '@/assets/img/footer-twitter.png', url : "#"},
+                {logoName: "YouTube", logoSrc : '@assets/img/footer-youtube.png', url : "#"},
+                {logoName: "Pinterest", logoSrc : '../assets/img/footer-pinterest.png', url : "#"},
+                {logoName: "Periscope", logoSrc : 'assets/img/footer-periscope.png', url : "#"}
                 
             ]
         }
