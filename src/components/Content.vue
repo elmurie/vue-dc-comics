@@ -1,13 +1,13 @@
 <template>
     <section>
-        <div class="comic container">
+        <div class="current-series container">
 			<Comic v-for="(comic,index) in comics" :key="index" :card="comic"/>
         </div>
     </section>
 </template>
 
 <script>
-import Comic from '../components/Comic.vue'
+import Comic from '../components/Comic.vue';
 export default {
     name : "Content",
     components : {
@@ -99,7 +99,12 @@ export default {
     section {
         background-color: #1C1C1C;
         color: #fff;
-        font-size: 1.5625rem;
+        padding: 2.5rem;
+
+        .current-series {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
 </style>

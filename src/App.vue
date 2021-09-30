@@ -3,7 +3,6 @@
     <div>
       <Header/>
       <Hero/>
-      <CurrentSeries/>
       <Content/>
       <CallToAction/>
       <Footer/>

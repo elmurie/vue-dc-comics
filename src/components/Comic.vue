@@ -12,6 +12,21 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+    .comic {
+        width: calc( (100% / 6) - 10px);
+        margin: 0 .3125rem; 
+        
+        .comic__cover {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: top;
+        }
+        .comic__name {
+            text-transform: uppercase;
+            font-size: .9375rem;
+        }
+    }
 
 </style>
