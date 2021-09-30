@@ -22,23 +22,23 @@ export default {
             icons : [
                 {
                     text : "DIGITAL COMICS",
-                    imgSrc : '../img/buy-comics-digital-comics.png'
+                    imgSrc : require('@/assets/img/buy-comics-digital-comics.png')
                 },
                 {
                     text : "DC MERCHANDISE",
-                    imgSrc : '../img/buy-comics-merchandise.png'
+                    imgSrc : require('@/assets/img/buy-comics-merchandise.png')
                 },
                 {
                     text : "SUBSCRIPTION",
-                    imgSrc : '../img/buy-comics-subscriptions.png'
+                    imgSrc : require('@/assets/img/buy-comics-subscriptions.png')
                 },
                 {
                     text : "COMIC SHOP LOCATION",
-                    imgSrc : '../img/buy-comics-shop-locator.png'
+                    imgSrc : require('@/assets/img/buy-comics-shop-locator.png')
                 },
                 {
                     text : "DC POWER VISA",
-                    imgSrc : '../img/buy-dc-power-visa.svg'
+                    imgSrc : require('@/assets/img/buy-dc-power-visa.svg')
                 }
             ]
         }
