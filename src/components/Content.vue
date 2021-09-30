@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="comic container">
-			<Comic v-for="(comic,index) in comics" :key="index" :prod="comicbook"/>
+			<Comic v-for="(comic,index) in comics" :key="index" :card="comic"/>
         </div>
     </section>
 </template>
@@ -98,9 +98,7 @@ export default {
 <style lang="scss" scoped>
     section {
         background-color: #1C1C1C;
-        height: 100px;
         color: #fff;
-        line-height: 100px;
         font-size: 1.5625rem;
     }
 

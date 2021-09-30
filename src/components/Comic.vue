@@ -1,17 +1,14 @@
 <template>
     <div class="comic">
-        <img class="comic__cover" src="comicbook.thumb" alt="comicbook.series" >
-        <div class="comic__name">
-            {{comicbook.series}}
-        </div>
-
+        <img class="comic__cover" :src="card.thumb" :alt="card.series" >
+        <div class="comic__name">{{card.series}}</div>
     </div>
 </template>
 
 <script>
 export default {
     name : "Comic",
-    props : ['comicbook']
+    props : ['card']
 }
 </script>
 
