@@ -2,16 +2,18 @@
     <footer>
         <div class="footer-top">
             <div class="container">
-                <ul>
-                    <li v-for="(list, index) in lists" :key="index">{{list.title}}
-                        <ul class="bigList">
-                            <li>
-                                <a href="list.url" v-for="(link, position) in list.links" :key="position">{{link.linkName}}</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <img src="../assets/img/dc-logo-bg.png" alt="">
+                <div class="menu">
+                    <ul>{{listA.title}}
+                        <li v-for="(link, index) in listA.links" :key="index"><a href="#">{{link}}</a></li>
+                    </ul>
+                    <ul>{{listB.title}}
+                        <li v-for="(link, index) in listB.links" :key="index"><a href="#">{{link}}</a></li>
+                    </ul>
+                    <ul>{{listC.title}}
+                        <li v-for="(link, index) in listC.links" :key="index"><a href="#">{{link}}</a></li>
+                    </ul>
+                </div>
+                <!-- <img src="../assets/img/dc-logo-bg.png" alt=""> -->
             </div>
         </div>
         <div class="footer-bottom">
@@ -39,54 +41,51 @@ export default {
     name : "Footer",
     data() {
         return {
-            lists : [
+            listA : 
                 {
                     title :  "DC COMICS",
                     links : [
-                        { linkName : "Characters", url : "#"},
-                        { linkName: "Comics", url : "#" },
-                        { linkName: "Movies", url : "#" },
-                        { linkName: "TV", url : "#" },
-                        { linkName: "Games", url : "#" },
-                        { linkName: "Videos", url : "#" },
-                        { linkName: "News", url : "#" }
+                        "Characters",
+                        "Comics",
+                        "Movies",
+                        "TV",
+                        "Games",
+                        "Videos",
+                        "News",
+                        "SHOP",
+                        "Shop DC",
+                        "Shop DC Collectibles"
                     ]
                 },
-                {
-                    title : "SHOP",
-                    links : [
-                        { linkName : "Shop DC", url : "#"},
-                        { linkName : "Shop DC Collectibles", url : "#"}
-                    ]
-                },
+            listB : 
                 {
                     title : "DC",
                     links : [
-                        { linkName : "Terms Of Use", url : "#"},
-                        { linkName : "Privacy Policy (New)", url : "#"},
-                        { linkName : "Ad Choices", url : "#"},
-                        { linkName : "Advertising", url : "#"},
-                        { linkName : "Jobs", url : "#"},
-                        { linkName : "Subscriptions", url : "#"},
-                        { linkName : "Talent Workshops", url : "#"},
-                        { linkName : "CPSC Certificates", url : "#"},
-                        { linkName : "Ratings", url : "#"},
-                        { linkName : "Shop Help", url : "#"},
-                        { linkName : "Contact us", url : "#"}
+                        "Terms Of Use",
+                        "Privacy Policy (New)",
+                        "Ad Choices",
+                        "Advertising",
+                        "Jobs",
+                        "Subscriptions",
+                        "Talent Workshops",
+                        "CPSC Certificates",
+                        "Ratings",
+                        "Shop Help",
+                        "Contact us"
                     ]
                 },
+            listC :
                 {
                     title : "SITES",
                     links : [
-                        { linkName : "DC", url : "#"},
-                        { linkName : "MAD Magazine", url : "#"},
-                        { linkName : "DC Kids", url : "#"},
-                        { linkName : "DC Universe", url : "#"},
-                        { linkName : "DC Power Visa", url : "#"}
+                        "DC",
+                        "MAD Magazine",
+                        "DC Kids",
+                        "DC Universe",
+                        "DC Power Visa"
                     ]
                 },
-                
-            ],
+
             logos : [
                 { logoName: "Facebook", logoSrc : require('@/assets/img/footer-facebook.png'), url : "#" },
                 { logoName: "Twitter", logoSrc : require('@/assets/img/footer-twitter.png'), url : "#"},
@@ -106,22 +105,36 @@ export default {
         background-image: url('~@/assets/img/footer-bg.jpg/');
         background-size: cover;
         background-repeat: no-repeat;
+        padding: 1.25rem;
         .container {
             display: flex;
-            height: 10%;
+            justify-content: space-between;
 
-            ul  {
-                width: 40%;
-            }
-            & li {
-                color: white;
-                
-                .bigList li {
-                    display: flex;
-                flex-direction: column;
+            .menu {
+                display: flex;
 
+                ul {
+                    margin-right: 1rem;
+                    font-size: 1.2rem;
+                    color : #fff;
+                    font-weight: 700;
                     a {
-                        color: #6d6d6d;
+                        font-size: 1rem;
+                        color: #919191;
+                    }
+
+                    &:first-child{
+                        li:nth-child(8) {
+                            a {
+                                display: inline-block;
+                                font-size: 1.2rem;
+                                cursor: initial;
+                                color: #fff;
+                                font-weight: 700;
+                                margin: 1rem 0 .55rem 0;
+
+                            }
+                        }
                     }
                 }
             }

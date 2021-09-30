@@ -6,8 +6,8 @@
             </div>
             <nav>
                 <ul>
-                    <li v-for="(link, index) in menu" :key="index">
-                        <a href="link.url" :class="{ active : link.current }" :tabindex="index">{{link.text}}</a>
+                    <li v-for="(link, index) in menu" :key="index" :tabindex="index">
+                        <a :href="link.url" :class="{ active : link.current }">{{link.text}}</a>
                     </li>
                 </ul>
             </nav>
@@ -98,15 +98,15 @@ export default {
                 margin: .625rem;
 
                 a {
+                    padding: 65px 0;
                     color: #000;
                     font-weight: 700;
-                    padding: 65px 0;
 
                     &:hover {
                         box-shadow: inset -2px -10px 0px -2px $mainColor;
                     }
 
-                    &:selected {
+                    &:focus {
                         box-shadow: inset -2px -10px 0px -2px $mainColor;
                     }
 
