@@ -59,6 +59,15 @@ export default {
         
         li {
             width: 20%;
+            transition: .3s;
+
+            &:hover {
+                opacity: .7;
+            }
+
+            a {
+                color: #fff;
+            }
             img {
                 width: 2.8rem;
                 margin-right: 1rem;
@@ -69,6 +78,7 @@ export default {
             &:last-child img {
                 width: 4rem;
             }
+
         }
     }
 

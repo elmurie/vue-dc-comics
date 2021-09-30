@@ -110,20 +110,26 @@ export default {
             flex-wrap: wrap;
 
             .flag {
-            position: absolute;
-            top: -14%;
-            font-size: 1.5625rem;
-            font-weight: 700;
-            background-color : $mainColor;
-            padding: .3125rem;
+                position: absolute;
+                top: -14%;
+                font-size: 1.5625rem;
+                font-weight: 700;
+                background-color : $mainColor;
+                padding: .3125rem;
             }
 
             a {
-            font-size: 15px;
-            font-weight: 700;
-            background-color : $mainColor;
-            padding: .625rem 3.125rem;
-            margin: 0 auto;
+                font-size: 15px;
+                font-weight: 700;
+                background-color : $mainColor;
+                padding: .625rem 3.125rem;
+                margin: 0 auto;
+                transition: .3s;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2);
+                }
             }
         }
     }

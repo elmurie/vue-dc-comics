@@ -13,7 +13,7 @@
                         <li v-for="(link, index) in listC.links" :key="index"><a href="#">{{link}}</a></li>
                     </ul>
                 </div>
-                <!-- <img src="../assets/img/dc-logo-bg.png" alt=""> -->
+                <div class="dc-logo"></div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -105,13 +105,14 @@ export default {
         background-image: url('~@/assets/img/footer-bg.jpg/');
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 1.25rem;
+
         .container {
             display: flex;
             justify-content: space-between;
 
             .menu {
                 display: flex;
+                padding: 1.25rem;
 
                 ul {
                     margin-right: 1rem;
@@ -121,6 +122,10 @@ export default {
                     a {
                         font-size: 1rem;
                         color: #919191;
+
+                        &:hover {
+                            color: #fff;
+                        }
                     }
 
                     &:first-child{
@@ -139,6 +144,15 @@ export default {
                 }
             }
 
+            .dc-logo {
+                margin: 0 0 0 8rem;
+                flex-grow: 0.8;
+                background-image: url('~@/assets/img/dc-logo-bg.png/');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
             
         }
     }
@@ -154,9 +168,20 @@ export default {
                 background-color: transparent;
                 border: .125rem solid $mainColor;
                 padding: .9375rem;
+                font-weight: 700;
+                transition: .6s;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fff;
+                }
+
+                &:hover a{
+                    color: #000;
+                }
                 
                 & > a{
-                    color: white;
+                    color: #fff;
                 } 
             }
             .lx {
@@ -182,6 +207,11 @@ export default {
 
                         img {
                             width: 70%;
+                            transition : .2s;
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
                         }
                     }
 
