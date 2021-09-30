@@ -106,15 +106,18 @@ export default {
         background-image: url('~@/assets/img/footer-bg.jpg/');
         background-size: cover;
         background-repeat: no-repeat;
-        height: 20%;
-
         .container {
             display: flex;
+            height: 10%;
+
+            ul  {
+                width: 40%;
+            }
             & li {
                 color: white;
                 
                 .bigList li {
-                display: flex;
+                    display: flex;
                 flex-direction: column;
 
                     a {
