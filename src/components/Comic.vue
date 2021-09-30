@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
     .comic {
         width: calc( (100% / 6) - 10px);
-        margin: 0 .3125rem; 
+        margin: .625rem .3125rem; 
         
         .comic__cover {
             width: 150px;
