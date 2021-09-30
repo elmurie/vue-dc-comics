@@ -18,8 +18,8 @@ export default {
         margin: .625rem .3125rem; 
         
         .comic__cover {
-            width: 150px;
-            height: 150px;
+            width: 9.375rem;
+            height: 9.375rem;
             object-fit: cover;
             object-position: top;
         }

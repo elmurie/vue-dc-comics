@@ -7,7 +7,7 @@
             <nav>
                 <ul>
                     <li v-for="(link, index) in menu" :key="index">
-                        <a href="link.url" :class="{ active : link.current }">{{link.text}}</a>
+                        <a href="link.url" :class="{ active : link.current }" :tabindex="index">{{link.text}}</a>
                     </li>
                 </ul>
             </nav>
@@ -79,21 +79,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables'; 
     header {
         background-color: #ffffff;
-    }
-    .header-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding: .9375rem;
+        height: 9.375rem;
 
-        ul {
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+
+            ul {
             display: flex;
 
             li {
                 margin: .625rem;
+
+                a {
+                    color: #000;
+                    font-weight: 700;
+                    padding: 65px 0;
+
+                    &:hover {
+                        box-shadow: inset -2px -10px 0px -2px $mainColor;
+                    }
+
+                    &:selected {
+                        box-shadow: inset -2px -10px 0px -2px $mainColor;
+                    }
+
+                }
             }
         }
+
+
+        }
     }
+    
 
 </style>

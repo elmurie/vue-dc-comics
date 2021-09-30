@@ -111,7 +111,7 @@ export default {
 
             .flag {
             position: absolute;
-            top: -15%;
+            top: -14%;
             font-size: 1.5625rem;
             font-weight: 700;
             background-color : $mainColor;
