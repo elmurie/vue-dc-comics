@@ -29,7 +29,4 @@ export default {
 <style lang="scss">
   @import './assets/style/common';
   
-  body {
-    background-color: grey;
-  }
 </style>

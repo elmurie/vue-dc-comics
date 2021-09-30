@@ -1,7 +1,7 @@
 <template>
     <footer>
-        <div class="container">
-            <div class="footer-top">
+        <div class="footer-top">
+            <div class="container">
                 <ul>
                     <li v-for="(list, index) in lists" :key="index">{{list.title}}
                         <ul class="bigList">
@@ -11,22 +11,24 @@
                         </ul>
                     </li>
                 </ul>
+                <img src="../assets/img/dc-logo-bg.png" alt="">
             </div>
-            <div class="footer-bottom">
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
                 <div class="lx">
-                    <button>SIGN-UP NOW!</button>
-                </div>
-                <div class="rx">
-                    <a>FOLLOW US</a>
-                    <ul>
-                        <li v-for="(logo, logoIndex) in logos" :key="logoIndex">
-                            <a :href="logo.url">
-                                <img :src="logo.logoSrc" :alt="logo.logoName">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
+                <button><a href="#">SIGN-UP NOW!</a></button>
+            </div>
+            <div class="rx">
+                <a>FOLLOW US</a>
+                <ul>
+                    <li v-for="(logo, logoIndex) in logos" :key="logoIndex">
+                        <a :href="logo.url">
+                            <img :src="logo.logoSrc" :alt="logo.logoName">
+                        </a>
+                    </li>
+                </ul>
+            </div>
             </div>
         </div>
     </footer>
@@ -39,7 +41,7 @@ export default {
         return {
             lists : [
                 {
-                    title :  "COMICS",
+                    title :  "DC COMICS",
                     links : [
                         { linkName : "Characters", url : "#"},
                         { linkName: "Comics", url : "#" },
@@ -86,11 +88,11 @@ export default {
                 
             ],
             logos : [
-                {logoName: "Facebook", logoSrc : require('@/assets/img/footer-facebook.png'), url : "#"},
-                {logoName: "Twitter", logoSrc : require('@/assets/img/footer-twitter.png'), url : "#"},
-                {logoName: "YouTube", logoSrc : require('@/assets/img/footer-youtube.png'), url : "#"},
-                {logoName: "Pinterest", logoSrc : require('@/assets/img/footer-pinterest.png'), url : "#"},
-                {logoName: "Periscope", logoSrc : require('@/assets/img/footer-periscope.png'), url : "#"}
+                { logoName: "Facebook", logoSrc : require('@/assets/img/footer-facebook.png'), url : "#" },
+                { logoName: "Twitter", logoSrc : require('@/assets/img/footer-twitter.png'), url : "#"},
+                { logoName: "YouTube", logoSrc : require('@/assets/img/footer-youtube.png'), url : "#" },
+                { logoName: "Pinterest", logoSrc : require('@/assets/img/footer-pinterest.png'), url : "#" },
+                { logoName: "Periscope", logoSrc : require('@/assets/img/footer-periscope.png'), url : "#" }
                 
             ]
         }
@@ -99,13 +101,77 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .bigList {
-        display: flex;
-        flex-direction: column;
-        flex-wrap : wrap;
+@import '../assets/style/variables';
+    .footer-top {
+        background-image: url('~@/assets/img/footer-bg.jpg/');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 20%;
+
+        .container {
+            display: flex;
+            & li {
+                color: white;
+                
+                .bigList li {
+                display: flex;
+                flex-direction: column;
+
+                    a {
+                        color: #6d6d6d;
+                    }
+                }
+            }
+
+            
+        }
     }
-    .bigList li {
-        display: flex;
-        flex-direction: column;
+    .footer-bottom {
+        background-color: #303030;
+        padding: 1.5rem;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                background-color: transparent;
+                border: .125rem solid $mainColor;
+                padding: .9375rem;
+                
+                & > a{
+                    color: white;
+                } 
+            }
+            .lx {
+                align-items: center;
+            }
+
+            .rx {
+                display: flex;
+                align-items: center;
+
+                a {
+                    margin-right: .625rem ;
+                    font-weight: 700;
+                    color: $mainColor;
+                }
+
+                ul {
+                    display: flex;
+    
+                    li {
+                        width: 20%;
+                        margin: 3px;
+
+                        img {
+                            width: 70%;
+                        }
+                    }
+
+                }
+            }
+        }
+
     }
 </style>

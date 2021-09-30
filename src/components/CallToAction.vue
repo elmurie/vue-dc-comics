@@ -4,9 +4,8 @@
             <nav>
                 <ul>
                     <li v-for="(link, index) in icons" :key="index">
-                        <img :src="link.imgSrc" :alt="link.text">
-                        <a 
-                        href="">{{link.text}}</a>
+                        <a href=""><img :src="link.imgSrc" :alt="link.text"></a>
+                        <a href="">{{link.text}}</a>
                     </li>
                 </ul>
             </nav>
