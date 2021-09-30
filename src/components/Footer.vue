@@ -169,15 +169,11 @@ export default {
                 border: .125rem solid $mainColor;
                 padding: .9375rem;
                 font-weight: 700;
-                transition: .6s;
+                transition: .3s;
 
                 &:hover {
                     cursor: pointer;
-                    background-color: #fff;
-                }
-
-                &:hover a{
-                    color: #000;
+                    background-color: $mainColor;
                 }
                 
                 & > a{
