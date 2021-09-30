@@ -3,6 +3,7 @@
     <div>
       <Header/>
       <Hero/>
+      <CurrentSeries/>
       <Content/>
       <CallToAction/>
       <Footer/>
@@ -31,5 +32,9 @@ export default {
 
 <style lang="scss">
   @import './assets/style/common';
+  
+  #app {
+    width: 100%;
+  }
   
 </style>
