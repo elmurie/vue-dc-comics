@@ -1,17 +1,17 @@
 <template>
-    <section class="jumbotron"></section>
+    <section class="jumbotron" :style="`background-image: url(${bgImage})`"></section>
 </template>
 
 <script>
 export default {
-    name : "Hero"
+    name : "Hero",
+    props: ['bgImage']
 }
 </script>
 
 <style lang="scss" scoped>
     .jumbotron {
         height: 18.75rem;
-        background-image: url('~@/assets/img/jumbotron.jpg/');
         background-size: cover;
         background-repeat: no-repeat;
     }

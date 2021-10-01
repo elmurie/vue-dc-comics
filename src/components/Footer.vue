@@ -87,11 +87,11 @@ export default {
                 },
 
             logos : [
-                { logoName: "Facebook", logoSrc : require('@/assets/img/footer-facebook.png'), url : "#" },
-                { logoName: "Twitter", logoSrc : require('@/assets/img/footer-twitter.png'), url : "#"},
-                { logoName: "YouTube", logoSrc : require('@/assets/img/footer-youtube.png'), url : "#" },
-                { logoName: "Pinterest", logoSrc : require('@/assets/img/footer-pinterest.png'), url : "#" },
-                { logoName: "Periscope", logoSrc : require('@/assets/img/footer-periscope.png'), url : "#" }
+                { logoName: "Facebook", logoSrc : require('../assets/img/footer-facebook.png'), url : "#" },
+                { logoName: "Twitter", logoSrc : require('../assets/img/footer-twitter.png'), url : "#"},
+                { logoName: "YouTube", logoSrc : require('../assets/img/footer-youtube.png'), url : "#" },
+                { logoName: "Pinterest", logoSrc : require('../assets/img/footer-pinterest.png'), url : "#" },
+                { logoName: "Periscope", logoSrc : require('../assets/img/footer-periscope.png'), url : "#" }
                 
             ]
         }

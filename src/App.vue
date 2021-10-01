@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <Header/>
-      <Hero/>
+      <Hero :bgImage="require('./assets/img/jumbotron.jpg')"/>
       <Content/>
       <CallToAction/>
       <Footer/>
