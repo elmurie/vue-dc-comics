@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="footer-top">
+        <div class="footer-top" :style="`background-image : url(${bgFooter})`">
             <div class="container">
                 <div class="menu">
                     <ul>{{listA.title}}
@@ -13,7 +13,7 @@
                         <li v-for="(link, index) in listC.links" :key="index"><a href="#">{{link}}</a></li>
                     </ul>
                 </div>
-                <div class="dc-logo"></div>
+                <div class="dc-logo" :style="`background-image : url(${bgDcLogo})`"></div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -85,7 +85,8 @@ export default {
                         "DC Power Visa"
                     ]
                 },
-
+            bgDcLogo : require('../assets/img/dc-logo-bg.png'),
+            bgFooter : require('../assets/img/footer-bg.jpg'),
             logos : [
                 { logoName: "Facebook", logoSrc : require('../assets/img/footer-facebook.png'), url : "#" },
                 { logoName: "Twitter", logoSrc : require('../assets/img/footer-twitter.png'), url : "#"},
@@ -102,7 +103,6 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/style/variables';
     .footer-top {
-        background-image: url('~@/assets/img/footer-bg.jpg/');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -147,7 +147,6 @@ export default {
             .dc-logo {
                 margin: 0 0 0 8rem;
                 flex-grow: 0.8;
-                background-image: url('~@/assets/img/dc-logo-bg.png/');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
