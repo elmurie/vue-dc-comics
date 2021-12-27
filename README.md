@@ -1,4 +1,10 @@
-# vue-dc-comics
+# Info
+
+A clone of DC Comics's homepage
+
+See it <a href="https://elmurie-vue-dc.netlify.app/">Here</a>.
+
+Technologies : **Vue.js**
 
 ## Project setup
 ```
